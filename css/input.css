@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-secondary font-primary font-light text-[14px] leading-8 lg:leading-6 h-full box-border;
+}

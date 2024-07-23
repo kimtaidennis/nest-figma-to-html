@@ -1,0 +1,648 @@
+<!doctype html>
+    <html>
+        <head>
+
+            <title>NEST</title>
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+            <link href="./dist/output.css" rel="stylesheet">
+
+        </head>
+    <body>
+        <!-- HEADER -->
+        <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-2 md:py-5">
+            <nav class="relative container w-full flex flex-wrap md:grid md:grid-cols-2 basis-full items-center px-4 md:px-6 mx-auto" aria-label="Global">
+                <div class="">
+                    <!-- Logo -->
+                    <a class="flex-none text-3xl text-dark-blue font-bold" href="#">NEST</a>
+                </div>
+
+                <!-- Button Group -->
+                <div class="flex md:hidden items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3">
+                    <!-- Menu Toggle Button -->
+                    <div class="">
+                        <div class="menu-toggle-icon py-1.5 px-3 flex justify-center items-center text-sm font-semibold rounded-md border border-gray-200 text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4 12L8 12M20 12L11 12M8 12L9.5 14L11 12M8 12L11 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Collapse -->
+                <div id="menu-toggle" class="hidden px-2 overflow-hidden transition-all duration-500 basis-full grow md:block md:order-2">
+                    <ul class=" flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-end md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+                        <li><a href="#" class="text-secondary hover:text-accent duration-300">Home</a></li>
+                        <li><a href="#" class="text-secondary hover:text-accent duration-300">About Us</a></li>
+                        <li><a href="#" class="text-secondary hover:text-accent duration-300">Properties</a></li>
+                        <li><a href="#" class="text-secondary hover:text-accent duration-300">Blog</a></li>
+                        <li><a href="#" class="text-secondary hover:text-accent duration-300">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <div class="h-96 lg:h-[450px] bg-no-repeat bg-center text-white text-center grid bg-cover bg-hero">
+            <div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"></div>
+            <div class="col-start-1 row-start-1 mx-auto my-auto space-y-4 md:space-y-10">
+                <p class="uppercase font-light text-white leading-4 text-xl">Affordable Housing Programme</p>
+                <h1 class="font-bold text-white text-xl md:text-4xl">Explore Property and Secure Your Ideal Home</h1>
+                <button class="py-1 md:py-2 bg-white text-dark-blue px-10 md:px-20 rounded-md">Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <section class="md:px-0 md:relative md:z-50 divide-y divide-gray-200 md:divide-none">
+            <div class="container md:-mt-[50px]">
+                <div class="py-4 md:p-4 max-w-4xl mx-auto md:rounded-md md:border md:border-gray-200 bg-white">
+                    <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-2 justify-center items-end">
+                        <div class="space-y-2">
+                            <p class="">Location <i class="ri-arrow-down-s-line"></i> </p>
+                            <input type="text" class="border border-gray-200 py-2 px-2 h-[36px] rounded-[4px] w-full">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="flex items-center">Type <i class="ri-arrow-down-s-line"></i> </p>
+                            <input type="text" class="border border-gray-200 py-2 px-2 h-[36px] rounded-[4px] w-full">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="">Average Price <i class="ri-arrow-down-s-line"></i> </p>
+                            <input type="text" class="border border-gray-200 py-2 px-2 h-[36px] rounded-[4px] w-full">
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <button class="py-1 md:py-2 bg-primary-blue text-white px-10 md:px-20 rounded-md h-[36px] w-full">Signup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto mt-5 py-8 md:py-10">
+                <h4 class="text-2xl text-dark-blue font-semibold">Expert Guide to Finding Perfect Property Fit</h4>
+                <div class="md:mt-5 grid md:grid-cols-4 gap-8">
+                    <!-- Icon Block -->
+                    <a class="group flex flex-col justify-center items-center md:items-start hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-xl dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 p-4 md:p-0" href="#">
+                        <div class="flex justify-center md:justify-start items-center size-8"><i class="ri-home-office-line text-primary-blue text-xl"></i></div>
+                        <div class="mt-5 space-y-2 text-center md:text-start">
+                            <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400 text-center md:text-start">Sell Properties</h3>
+                            <p class="mt-1 text-gray-600 dark:text-neutral-400 text-center md:text-start">
+                                Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                            </p>
+                            <span class="mt-2 inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium">
+                                Learn more
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <!-- End Icon Block -->
+
+                    <!-- Icon Block -->
+                    <a class="group flex flex-col justify-center items-center md:items-start hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-xl dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                        <div class="flex justify-start items-center size-8"><i class="ri-building-line text-primary-blue text-xl"></i></div>
+                        <div class="mt-5 space-y-2 text-center md:text-start">
+                            <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400 text-center md:text-start">Buy Properties</h3>
+                            <p class="mt-1 text-gray-600 dark:text-neutral-400 text-center md:text-start">
+                                Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                            </p>
+                            <span class="mt-2 inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium">
+                                Learn more
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <!-- End Icon Block -->
+
+                     <!-- Icon Block -->
+                    <a class="group flex flex-col justify-center items-center md:items-start hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-xl dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                        <div class="flex justify-start items-center size-8"><i class="ri-building-2-line text-primary-blue text-xl"></i></div>
+                        <div class="mt-5 space-y-2 text-center md:text-start">
+                            <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400 text-center md:text-start">Rent Properties</h3>
+                            <p class="mt-1 text-gray-600 dark:text-neutral-400 text-center md:text-start">
+                                Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                            </p>
+                            <span class="mt-2 inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium">
+                                Learn more
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <!-- End Icon Block -->
+
+                     <!-- Icon Block -->
+                    <a class="group flex flex-col justify-center items-center md:items-start hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-xl dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                        <div class="flex justify-start items-center size-8"><i class="ri-hotel-line text-primary-blue text-xl"></i></div>
+                        <div class="mt-5 space-y-2 text-center md:text-start">
+                            <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400 text-center md:text-start">Lease Properties</h3>
+                            <p class="mt-1 text-gray-600 dark:text-neutral-400 text-center md:text-start">
+                                Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                            </p>
+                            <span class="mt-2 inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium">
+                                Learn more
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <!-- End Icon Block -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Us -->
+        <section class="bg-dark-blue text-white py-10 md:py-0">
+            <div class="container mx-auto">
+                <div class="py-10 grid md:grid-cols-2 md:gap-x-8 justify-center items-center ">
+                    <div class="grid gap-4 grid-cols-2">
+                        <div class="overflow-hidden rounded-[10px] border-[4px] border-white">
+                            <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Us" class="object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-[10px] border-[4px] border-white">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Us" class="object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-[10px] border-[4px] border-white">
+                            <img src="https://plus.unsplash.com/premium_photo-1686090450346-f418fff5486e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Us" class="object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-[10px] border-[4px] border-white">
+                            <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Us" class="object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-5 py-5 md:py-10">
+                        <p class="">About Us</p>
+                        <h3 class="font-semibold text-2xl">More Than Just Property</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula.
+                            Nibh convallis placerat volutpat aliquet ac ut. 
+                            In odio tortor diam nulla blandit. Vitae vel eu vulputate leo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula.
+                            Nibh convallis placerat volutpat aliquet ac ut. 
+                            In odio tortor diam nulla blandit. Vitae vel eu vulputate leo.
+                        </p>
+
+                        <div class="grid grid-cols-3 justify-center md:gap-4 py-4">
+                            <div class="space-y-2 text-center">
+                                <p class="font-bold text-2xl">2M+</p>
+                                <p>Happy Customers</p>
+                            </div>
+                            <div class="space-y-2 text-center">
+                                <p class="font-bold text-2xl">100K +</p>
+                                <p>Completed Projects</p>
+                            </div>
+                            <div class="space-y-2 text-center">
+                                <p class="font-bold text-2xl">100%</p>
+                                <p>Return on Investment</p>
+                            </div>
+                        </div>
+                        <button class="py-1 md:py-2 bg-white text-dark-blue px-10 md:px-20 rounded-md">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="text-dark-blue py-5 md:py-0 bg-[#F9FAFA] md:pt-10">
+            <div class="container mx-auto">
+                <div class="space-y-5">
+                    <h3 class="text-2xl text-dark-blue font-semibold">Featured Properties</h3>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex gap-2 items-center">
+                            <span class="border border-primary-blue bg-primary-blue text-white text-sm py-2 px-6 hover:bg-dark-blue rounded-full">Buy</span>
+                            <span class="border border-gray-500 text-sm py-2 px-6 hover:bg-dark-blue rounded-full">Build</span>
+                            <span class="border border-gray-500 text-sm py-2 px-6 hover:bg-dark-blue rounded-full">Rent</span>
+                            <span class="border border-gray-500 text-sm py-2 px-6 hover:bg-dark-blue rounded-full">Sell</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <span class="border border-primary-blue text-primary-blue text-sm py-2 px-4 hover:bg-dark-blue rounded-lg">Explore</span>
+                            <span class="border border-primary-blue text-primary-blue text-sm py-2 px-4 hover:bg-dark-blue rounded-lg">Build</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-6">
+                     <!-- Grid -->
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
+
+                        <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="text-lg font-medium space-x-2 text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>The Quartz Condo</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Bungalow
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="text-lg space-x-2 font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>The Camp</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Apartment
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://plus.unsplash.com/premium_photo-1686090450346-f418fff5486e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="text-lg space-x-2 font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Mt Olive Residence</span>
+                                    <span class="py-1 font-light px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Bungalow
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                         <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                               
+                                <h3 class="text-lg space-x-2 font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Tsavo Condo</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Bungalow
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                         
+                        <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1515263487990-61b07816b324?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjcyfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="space-x-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Harricon Flats</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Bungalow
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                         <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1472502516535-eeee381bb45e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDUyfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="space-x-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Riara Drive Courts</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Bungalow
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="space-x-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Bianca Apartments</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Apartment
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+
+                         <!-- Card -->
+                        <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-56" src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                
+                                <h3 class="text-lg space-x-2 font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
+                                    <span>Roselyn Hostels</span>
+                                    <span class="py-1 px-3 font-light bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                        Flats
+                                    </span>
+                                </h3>
+                                <p class="space-x-3"><i class="ri-map-pin-line text-primary-blue"></i> Naperville, USA</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="py-5  md:py-16">
+            <div class="container px-4 md:px-0">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <p class="text-primary-blue capitalize text-sm font-medium">Our Blog</p>
+                        <div class="flex justify-between">
+                            <p class="text-xl text-dark-blue font-semibold">Latest Posts</p>
+                            <span class="text-primary-blue text-sm">View All</span>
+                        </div>
+                        <div class="border border-gray-100 shadow-sm  rounded-md p-3 space-y-2">
+                            <p class="text-sm">By John Doe | Feb 23, 2024</p>
+                            <p class="text-dark-blue text-xl font-semibold">Legal Considerations for Buying Property in Kenya</p>
+                        </div>
+                        <div class="border border-gray-100 shadow-sm rounded-md p-3 space-y-2">
+                            <p class="text-sm">By John Doe | Feb 23, 2024</p>
+                            <p class="text-dark-blue text-xl font-semibold">More changes towards property ownership by parliament </p>
+                        </div>
+                        <div class="border border-gray-100 shadow-sm rounded-md p-3 space-y-2">
+                            <p class="text-sm">By John Doe | Feb 23, 2024</p>
+                            <p class="text-dark-blue text-xl font-semibold">New Legislation on property managament ammended </p>
+                        </div>
+                        <div class="border border-gray-100 shadow-sm rounded-md p-3 space-y-2">
+                            <p class="text-sm">By John Doe | Feb 23, 2024</p>
+                            <p class="text-dark-blue text-xl font-semibold">Boom in real estate property sales in the year 2024</p>
+                        </div>
+                        
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-xl text-dark-blue font-semibold">Featured post</p>
+                         <!-- Card -->
+                         <div class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img class="w-full object-cover rounded-t-xl max-h-80" src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image">
+                            </div>
+                            <div class="p-2 md:p-4 space-y-2">
+                                <span>By John Doe | Feb 23, 2024</span>
+                                <h4 class="text-dark-blue">First-Time Homebuyer Tips for the Kenyans...</h4>
+                                <p class="">Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut. In odio tortor diam nulla blandit. Vitae vel eu vulputate leo.</p>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="bg-dark-blue text-white py-10 md:py-20">
+            <div class="container">
+                <div class="space-y-2 mb-4">
+                    <p class="capitalize text-sm font-medium">Testimonials</p>
+                    <h3 class="text-xl text-white font-semibold">Hear From Our Clients</h3>
+                </div>
+               
+                <!-- Grid -->
+                <div class="grid md:grid-cols-3 gap-4 md:gap-8">
+                    <!-- Card -->
+                    <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700">
+                        <div class="flex-auto p-4 md:p-6">
+                            <p class="mt-3 sm:mt-6 text-sm text-gray-800 md:text-xl dark:text-white"><em>
+                                " I'm absolutely floored by the level of care and attention to detail the team at HS have put into this theme and for one can guarantee that I will be a return customer. "
+                            </em></p>
+                        </div>
+                        <div class="p-4 rounded-b-xl md:px-6">
+                            <h3 class="text-sm font-semibold text-gray-800 sm:text-base dark:text-neutral-200">Nicole Grazioso</h3>
+                            <p class="text-sm text-gray-500 dark:text-neutral-500">Director Payments & Risk | HubSpot</p>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700">
+                        <div class="flex-auto p-4 md:p-6">
+                            <p class="mt-3 sm:mt-6 text-gray-800 md:text-xl dark:text-white text-sm"><em>
+                                " With Nest, we're able to easily track our performance in full detail. It's become an essential tool for us to grow and engage with our audience. "
+                            </em></p>
+                        </div>
+                        <div class="p-4 rounded-b-xl md:px-6">
+                            <h3 class="text-sm font-semibold text-gray-800 sm:text-base dark:text-neutral-200">Josh Tyson</h3>
+                            <p class="text-sm text-gray-500 dark:text-neutral-500">Product Manager | Capsule</p>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700">
+                        <div class="flex-auto p-4 md:p-6">
+                            <p class="mt-3 sm:mt-6 text-sm text-gray-800 md:text-xl dark:text-white"><em>
+                                " In September, I will be using this app for 2 years. I went through multiple updates and changes and I'm very glad to see the consistency and effort made by the team. "
+                            </em></p>
+                        </div>
+                        <div class="p-4 rounded-b-xl md:px-6">
+                            <h3 class="text-sm font-semibold text-gray-800 sm:text-base dark:text-neutral-200"> Luisa </h3>
+                            <p class="text-sm text-gray-500 dark:text-neutral-500"> Senior Director of Operations | Fitbit </p>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="section py-10 md:py-20">
+            <div class="container">
+                <!-- Grid -->
+                <div class="grid md:grid-cols-3 gap-4 md:gap-8">
+                    <!-- Grid Col -->
+                    <div class="space-y-5 md:space-y-3">
+                        <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white text-dark-blue">Frequently<br>asked questions</h2>
+                        <p class="mt-1 hidden md:block text-gray-600 dark:text-neutral-400 pr-8">
+                            Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                            Lorem ipsum dolor sit amet consectetur. Id sit quis mauris malesuada vehicula. Nibh convallis placerat volutpat aliquet ac ut vel eu vulputate leo.
+                        </p>
+                        <button class="hidden md:block py-1 md:py-2 bg-primary-blue text-white px-10 md:px-20 rounded-md">Sign Up</button>
+                    </div>
+                    <!-- End Grid Col -->
+                    <div class="md:col-span-2">
+                        <!-- Accordion -->
+                        <div class="divide-y divide-gray-200 dark:divide-neutral-700">
+                            <div class="">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    Legal Considerations for Buying Property in Kenya?
+                                    <i class="hidden ri-arrow-down-s-line"></i>
+                                    <i class="block ri-arrow-up-s-line"></i>
+                                </button>
+                                <div class="w-full py-2 overflow-hidden transition-[height] duration-300">
+                                    <p class="text-gray-600 dark:text-neutral-400">
+                                        Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="py-5">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    Can I cancel at anytime?
+                                    <i class="block ri-arrow-down-s-line"></i>
+                                    <i class="hidden ri-arrow-up-s-line"></i>
+                                </button>
+                            </div>
+                            <div class="py-5">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    My team has credits. How do we use them?
+                                    <i class="block ri-arrow-down-s-line"></i>
+                                    <i class="hidden ri-arrow-up-s-line"></i>
+                                </button>
+                            </div>
+                            <div class="py-5">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    How does Insolve's pricing work?
+                                    <i class="block ri-arrow-down-s-line"></i>
+                                    <i class="hidden ri-arrow-up-s-line"></i>
+                                </button>
+                            </div>
+                            <div class="py-5">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    How secure is Insolve
+                                    <i class="block ri-arrow-down-s-line"></i>
+                                    <i class="hidden ri-arrow-up-s-line"></i>
+                                </button>
+                            </div>
+                            <div class="py-5">
+                                <button class="group pb-3 inline-flex items-center justify-between size-5 gap-x-5 w-full md:text-lg font-medium text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                                    How do I get access to a theme I purchased?
+                                    <i class="block ri-arrow-down-s-line"></i>
+                                    <i class="hidden ri-arrow-up-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="bg-dark-blue">
+            <footer class="mt-auto w-full dark:bg-neutral-950 py-6 lg:py-16 container mx-auto">
+                <div class="mt-auto divide-y divide-gray-600 space-y-4">
+                    <!-- Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                        <div class="col-span-full lg:col-span-1">
+                            <a class="flex-none text-xl font-semibold text-white" href="#" aria-label="Brand">NEST</a>
+                            <p class="text-gray-300 mt-2">Lorem ipsum dolor sit amet, consectr adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvnar tortor. </p>
+                        </div>
+                        <!-- End Col -->
+                
+                       
+                        <div class="col-span-1 hidden md:block"></div>
+                
+                        <div class="col-span-1">
+                            <h4 class="font-medium text-gray-100">Company</h4>
+                    
+                            <div class="mt-3 grid space-y-3">
+                                <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Home</a></p>
+                                <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200" href="#">About us</a></p>
+                                <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Blog</a></p>
+                                <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Properties</a></p>
+                                <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Contact Us</a></p>
+                            </div>
+                        </div>
+                        <!-- End Col -->
+                
+                        <div class="md:col-span-2">
+                            <h4 class="font-medium text-gray-100">Stay up to date</h4>
+                    
+                            <form>
+                                <div class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 rounded-lg md:p-2 px-0 dark:bg-neutral-900">
+                                    <div class="w-full">
+                                        <label for="hero-input" class="sr-only">Search</label>
+                                        <input type="text" id="hero-input" name="hero-input" class="py-2.5 px-4 block min-w-48 w-full border-transparent rounded-md text-sm focus:border-blue-500 placeholder:font-light focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email">
+                                    </div>
+                                    <a class="w-full sm:w-auto whitespace-nowrap py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                        Subscribe
+                                    </a>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-400">
+                                    New UI kits or big discounts. Never spam.
+                                </p>
+                            </form>
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Grid -->
+                    <div class="pt-6 sm:mt-12 grid gap-y-2 sm:gap-y-0 justify-center sm:flex sm:justify-between sm:items-center">
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm font-normal text-gray-400 dark:text-neutral-400">© 2024 Nest. All rights reserved.</p>
+                        </div>
+                        <!-- End Col -->
+                
+                        <!-- Social Brands -->
+                        <div>
+                            <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="#">
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </a>
+                            <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="#">
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                                </svg>
+                            </a>
+                            <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="#">
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </a>
+                            <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="#">
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600" href="#">
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- End Social Brands -->
+                    </div>
+                 </div>
+            </footer>
+        </section>
+
+        <!-- ---- Main --- -->
+        <script src="js/main.js" ></script>
+    </body>
+</html>
